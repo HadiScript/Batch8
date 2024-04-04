@@ -1,22 +1,17 @@
-// console.log("hadi");
+const arr1 = [1, 2, 3, 4, 5];
 
-const arr = [
-  { color: "red", age: 1 },
-  { color: "red", age: 2 },
-  { color: "blue", age: 3 },
-  { color: "red", age: 4 },
-  { color: "red", age: 5 },
-  { color: "red", age: 6 },
-];
+// console.log(arr1.length);
 
-// for (let i = 0; i < arr.length; i++) {
-//   if (arr[i].age <= 5) console.log(arr[i]);
-// }
+// print fully array
+// console.log(arr1);
 
-// arr.map( () => {} )
-// arr.map((x) => (x.age <= 5 ? console.log(x) : console.log("none")));
-// const newArr = arr.map((x) => x.age <= 5 && x);
+// print item of arr
+// map -> return new arr
+// const newArr = arr1.map((x) => x > 3);
+// const newArr2 = arr1.filter((x) => x > 3);
 
-const newArr = arr.filter((x) => x.age !== 5);
+// console.log(newArr, "map fun");
+// console.log(newArr2, "filter func, will return values of arr");
 
-console.log(newArr);
+// slice
+// arr1.slice(0, 2).map((x) => console.log(x));
