@@ -1,4 +1,11 @@
 .dark .form-select {
-  background-color: #212529 !important;
+  background-color: black !important;
   color: white;
+  outline: none !important;
+  border: none ;
+}
+
+.darkBg {
+  background-color: black !important;
+  color: white !important;
 }

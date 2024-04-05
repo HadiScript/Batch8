@@ -6,6 +6,7 @@ import useTheme from "../hooks/useTheme";
 import Categories from "./components/Categories";
 import List from "./components/List";
 import Which from "./components/Which";
+import useCats from "../hooks/useCats";
 
 const App = () => {
 
@@ -13,14 +14,12 @@ const App = () => {
 
   const [whichComponent, setWhichComponent] = useState('cats')
 
-  const [cats, setCats] = useState([
-    'ReactJs', 'NodeJs', 'Javascript', 'Solidity', 'Microservices', 'ORM'
-  ])
+  const { cats, addCats, changeHandler, newCats } = useCats();
 
 
 
   return (
-    <div className={`bg-${value} text-${value === "light" ? "" : "white"}`} style={{ minHeight: "100vh" }}>
+    <div className={`${value === 'dark' ? 'darkBg' : ""}`} style={{ minHeight: "100vh" }}>
 
       <div className="container">
 
@@ -32,7 +31,14 @@ const App = () => {
         />
 
         {
-          whichComponent === 'cats' ? <Categories cats={cats} setCats={setCats} /> : <List />
+          whichComponent === 'cats' ?
+            <Categories
+              cats={cats}
+              addCats={addCats}
+              changeHandler={changeHandler}
+              newCats={newCats}
+            /> :
+            <List />
         }
 
       </div>
