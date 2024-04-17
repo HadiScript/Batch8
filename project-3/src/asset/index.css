@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+._link {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar {
+  /* background-color: violet; */
+  border-right: 1px solid rgba(191, 191, 191, 0.474);
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 10px;
+  gap: 10px;
+}
+
+.rightside {
+  /* background-color: purple; */
+}
